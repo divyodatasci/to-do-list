@@ -1,9 +1,4 @@
-import List from './components/List';
-import TaskAdder from './components/TaskAdder';
-import './index.css'
-
-function App() {
-  const taskList = [
+export const demoTaskList = [
     "Complete homework assignments",
     "Call mom",
     "Buy groceries",
@@ -25,11 +20,3 @@ function App() {
     "Take out the trash",
     "Review project proposal"
   ];
-  return (
-    <div className="App">
-      <TaskAdder/>
-    </div>
-  );
-}
-
-export default App;
