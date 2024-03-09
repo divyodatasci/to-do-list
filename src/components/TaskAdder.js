@@ -11,8 +11,8 @@ const TaskAdder = () => {
   })
 
   const getUniqueId = (objectList) => {
-    const maxId = objectList.sort((a,b) => a.id - b.id).pop().id + 1;
-    return maxId;
+    const newId = objectList.sort((a,b) => a.id - b.id)[objectList.length - 1].id + 1;
+    return newId;
   } 
    
   const [taskList, setTaskList] = useState(taskObjList);
@@ -20,10 +20,9 @@ const TaskAdder = () => {
     e.preventDefault();
     const newTask = {
       id: getUniqueId(taskList),
-      item: inputRef.current.value
+      task: inputRef.current.value
     }
     setTaskList([newTask, ...taskList])
-    console.log(taskList)
     inputRef.current.value = '';
 
   }
