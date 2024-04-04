@@ -1,6 +1,9 @@
 import List from './components/List';
 import TaskAdder from './components/TaskAdder';
+import TaskAdderRedux from './components/TaskAdderRedux';
+import {Provider} from "react-redux";
 import './index.css'
+import appStore from './utils/appStore';
 
 function App() {
   const taskList = [
@@ -26,9 +29,12 @@ function App() {
     "Review project proposal"
   ];
   return (
-    <div className="App">
-      <TaskAdder/>
-    </div>
+    <Provider store={appStore} >
+      <div className="App">
+        <TaskAdder/>
+        <TaskAdderRedux/>
+      </div>
+    </Provider>
   );
 }
 
