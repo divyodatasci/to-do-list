@@ -1,9 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <div>
-        <h1 className=' text-center'>To-Do List</h1>
+    <div className=' flex  align-middle'>
+        <Link to= '/' className=' mx-4 text-center'>Using Prop Drilling</Link>
+        <Link to= '/taskAdderRedux' className=' mx-4 text-center'>Using Redux</Link>
+        
+
     </div>
   )
 }
